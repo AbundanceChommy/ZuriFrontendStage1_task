@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Augusta Chioma">
+    <meta name="description" content="A Frontend Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product"/>
+    <meta property="og:title" content="Chioma Frontend developer">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/portfolio_logo.png">
+    <meta property="og:description" content="A Frontend Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product">
+    <meta property="og:locale" content="en-Nig">
+    <meta property="og:site_name" content="Chioma's Portfolio Website">
+    <title>Chioma Portfolio website</title>
+    <link rel="stylesheet" href="./css/style.css">
+    
+
+</head>
+<body>
+    <!--The main container of my portfolio website-->
+    <main class="main_container">
+            <!-- Slack Name -->
+    <p><h1 data-testid="slackUserName">Iwuchukwu Chioma</h1></p>
+
+    <!-- Slack Display Picture -->
+    <img src="./images/Chy.jpg" alt="Iwuchukwu Chioma" data-testid="slackDisplayImage">
+
+    <!-- Current Day of the Week -->
+    <p data-testid="currentDayOfTheWeek"></p>
+
+    <!-- Current UTC Time -->
+    <p data-testid="currentUTCTime"></p>
+
+    <!-- Track -->
+    <p data-testid="myTrack">Frontend</p>
+
+     <!-- GitHub URL -->
+     <p data-testid="githubURL"><a href="link-to-your-GitHub-repo">GitHub Repository</a></p>
+
+     <script>
+         // JavaScript for Current Day of the Week
+         const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+         const today = new Date();
+         const currentDay = daysOfWeek[today.getDay()];
+         document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = currentDay;
+ 
+         // JavaScript for Current UTC Time
+         const currentUTCTime = new Date().getTime();
+         document.querySelector('[data-testid="currentUTCTime"]').textContent = currentUTCTime;
+     </script>
+
+    </main>
+
+    <footer>
+        &copy; Copyright Chioma Augusta <script>document.write(new Date().getFullYear())</script>.
+    </footer>
+</body>
